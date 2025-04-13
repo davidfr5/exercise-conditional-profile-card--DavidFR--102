@@ -1,90 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link rel="shortcut icon" href="./assets/img/4geeks.ico" />
-    <script
-      src="https://kit.fontawesome.com/072e5df971.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-
-  <body>
-    <ul class="filters">
-      <li>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conditional Profile Card</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container py-4">
+    <div class="row g-2 mb-4">
+      <div class="col">
         <label>Include Cover</label>
-        <select class="picker" for="includeCover">
-          <option value="">Include Cover</option>
-          <option value="true">True</option>
+        <select class="form-select" id="includeCover">
+          <option value="true" selected>True</option>
           <option value="false">False</option>
         </select>
-      </li>
-      <li>
-        <label>Name</label>
-        <input class="picker" for="name" type="text" />
-      </li>
-      <li>
-        <label>Last Name</label>
-        <input class="picker" for="lastName" type="text" />
-      </li>
-      <li>
+      </div>
+      <div class="col"><label>Name</label><input class="form-control" id="name" placeholder="Name"/></div>
+      <div class="col"><label>Last Name</label><input class="form-control" id="lastName" placeholder="Last Name"/></div>
+      <div class="col">
         <label>S.M. Position</label>
-        <select class="picker" for="socialMediaPosition">
-          <option value="position-left">Left</option>
-          <option value="position-right">Right</option>
+        <select class="form-select" id="socialMediaPosition">
+          <option value="left">Left</option>
+          <option value="right" selected>Right</option>
         </select>
-      </li>
-      <li>
-        <label>Twitter</label>
-        <input class="picker" for="twitter" type="text" />
-      </li>
-      <li>
-        <label>Github</label>
-        <input class="picker" for="github" type="text" />
-      </li>
-      <li>
-        <label>LinkedIn</label>
-        <input class="picker" for="linkedin" type="text" />
-      </li>
-      <li>
-        <label>Instagram</label>
-        <input class="picker" for="instagram" type="text" />
-      </li>
-      <li>
-        <label>Role</label>
-        <select class="picker" for="role">
-          <option value="">null</option>
-          <option value="Web Developer">Web Developer</option>
-          <option value="Floor Planner">Floor Planner</option>
-          <option value="Technical Writter">Technical Writter</option>
-        </select>
-      </li>
-      <li>
-        <label>City</label>
-        <select class="picker" for="city">
-          <option value="">null</option>
-          <option value="Miami">Miami</option>
-          <option value="Munich">Munich</option>
-          <option value="Caracas">Caracas</option>
-          <option value="Toronto">Toronto</option>
-        </select>
-      </li>
-      <li>
-        <label>Country</label>
-        <select class="picker" for="country">
-          <option value="">null</option>
-          <option value="USA">USA</option>
-          <option value="Germany">Germany</option>
-          <option value="Canada">Canada</option>
-          <option value="Venezuela">Venezuela</option>
-        </select>
-      </li>
-    </ul>
+      </div>
+      <div class="col"><label>Twitter</label><input class="form-control" id="twitter" placeholder="Username"/></div>
+      <div class="col"><label>Github</label><input class="form-control" id="github" placeholder="Username"/></div>
+      <div class="col"><label>LinkedIn</label><input class="form-control" id="linkedin" placeholder="Username"/></div>
+      <div class="col"><label>Instagram</label><input class="form-control" id="instagram" placeholder="Username"/></div>
+      <div class="col"><label>Role</label><input class="form-control" id="role" placeholder="Role"/></div>
+      <div class="col"><label>City</label><input class="form-control" id="city" placeholder="City"/></div>
+      <div class="col"><label>Country</label><input class="form-control" id="country" placeholder="Country"/></div>
+    </div>
     <div id="widget_content"></div>
+  </div>
 
-    <!-- do not remove this bundle.js tag -->
-    <script type="text/javascript" src="/main.bundle.js"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
 </html>
